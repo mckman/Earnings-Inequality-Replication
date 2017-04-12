@@ -6,7 +6,6 @@ Subject: Reproduction Archive for:
 Authors: Kevin McKinney (John Abowd and Nellie Zhao)
 Date: April 10, 2017
 
-All released data is in Dropbox/JohnKevinLars/NBER Firms and Inequality/Tables_Kevin
 
 Tables and Figures in the Paper
 ------------------------------------------------
