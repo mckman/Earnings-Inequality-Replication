@@ -1,0 +1,11 @@
+   /**** Numident Gender begins here ****/
+
+   length gender $1 gender_flag 3;
+
+   if pcf_gender in("M","F") then do;
+      gender_flag=0;
+      gender=pcf_gender;
+   end;
+   else gender_flag=9;
+
+   /**** Numident Gender ends here ****/

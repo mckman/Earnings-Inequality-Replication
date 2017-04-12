@@ -1,0 +1,9 @@
+   /**** Numident race begins here ****/
+
+   length  pcf_race $1;
+
+   /* PCF race variable (bestrace) */
+
+   pcf_race=put(bestrace,$raceb.);
+
+   /**** Numident race ends here ****/

@@ -1,0 +1,110 @@
+   /**** Numident DOB begins here ****/
+
+   length DOB 4 DOB_flag year_ok month_ok day_ok
+          pcf_yob pcf_mob pcf_dob 
+          impute_day  period_days
+          pcf_dob_corrected pcf_dob_flag
+          DOB_year DOB_month DOB_day 3 age_jan1 8;
+
+
+   /* Check PCF DOB variables for non-numeric characters and the proper length */
+   year_ok=0;
+   month_ok=0;
+   day_ok=0;
+   do i=1 to 2;
+      if  substr(dobcc,i,1) > byte(47) and substr(dobcc,i,1) < byte(58) then year_ok=year_ok+1;
+   end;
+   do i=1 to 2;
+      if  substr(dobyy,i,1) > byte(47) and substr(dobyy,i,1) < byte(58) then year_ok=year_ok+1;
+   end;
+   do i=1 to 2;
+      if  substr(dobmm,i,1) > byte(47) and substr(dobyy,i,1) < byte(58) then month_ok=month_ok+1;
+      if  substr(dobdd,i,1) > byte(47) and substr(dobyy,i,1) < byte(58) then day_ok=day_ok+1;
+   end;
+
+   /* If OK then convert to numeric */
+   pcf_dob_flag=0;
+   if year_ok>3 then do;
+      pcf_yob = input(dobcc || dobyy,4.);
+      if pcf_yob > 0  then                  pcf_dob_flag=1;
+   end;
+   if month_ok>1 then do;
+      pcf_mob = input(dobmm,2.);
+      if pcf_dob_flag=1 and pcf_mob > 0 and pcf_mob < 13 then pcf_dob_flag=2;
+   end;
+   if day_ok>1 then do;
+      pcf_dob = input(dobdd,2.);
+      if pcf_dob_flag=2 and pcf_dob > 0 and pcf_mob < 32 then pcf_dob_flag=3;
+   end;
+
+   /* Correct and complete DOB */
+
+   retain seed1 348928;
+
+   call ranuni(seed1,rand1);
+   pcf_dob_corrected=0;
+
+   /* Year is known - impute month and day */
+   if pcf_dob_flag=1 then do;
+      DOB=mdy(1,1,pcf_yob);
+      period_days=mdy(1,1,pcf_yob+1) - DOB;
+      impute_day=floor(rand1 * period_days);
+      if impute_day > period_days then impute_day = period_days - 1;
+      DOB=DOB + impute_day;
+      pcf_mob=month(DOB);
+      pcf_dob=day(DOB);
+   end;
+
+   /* Year and month are known - impute day */
+   if pcf_dob_flag=2 then do;
+      DOB=mdy(pcf_mob,1,pcf_yob);
+      if pcf_mob<12 then do;
+         period_days=mdy(pcf_mob+1,1,pcf_yob) - DOB;
+      end;
+      else do;
+         period_days=31;
+      end;
+      impute_day=floor(rand1 * period_days);
+      if impute_day > period_days then impute_day = period_days - 1;
+      DOB=DOB + impute_day;
+      pcf_dob=day(DOB);
+   end;
+
+   /* Year month and day are known - ensure day is valid */
+   if pcf_dob_flag=3 then do;
+      if pcf_mob<12 then do;
+         period_days=mdy(pcf_mob+1,1,pcf_yob) - mdy(pcf_mob,1,pcf_yob);
+      end;
+      else do;
+         period_days=31;
+      end;
+      if pcf_dob>period_days then do;
+         pcf_dob_corrected=1;
+         pcf_dob=period_days;
+      end;
+      DOB=mdy(pcf_mob,pcf_dob,pcf_yob);
+   end;
+
+   /* Create the DOB_flag variable */
+
+   if pcf_dob_flag=3 and pcf_dob_corrected=0 then DOB_flag=0;
+   else if pcf_dob_flag=3 and pcf_dob_corrected=1 then DOB_flag=1;
+   else if pcf_dob_flag=2 then DOB_flag=2;
+   else if pcf_dob_flag=1 then DOB_flag=3;
+   else DOB_flag=9;
+
+   if DOB_flag~=9 then do;
+      DOB_year=year(DOB);
+      DOB_month=month(DOB);
+      DOB_day=day(DOB);
+      age_jan1=(mdy(1,1,year(today()))-DOB)/365.2425;
+   end;
+
+   /* Check DOB for a standard and leap year */
+
+   if pcf_dob_flag>0 then do;
+      period_days_all=mdy(1,1,pcf_yob+1) - mdy(1,1,pcf_yob);
+      part_year=(mdy(pcf_mob,pcf_dob,pcf_yob) - mdy(1,1,pcf_yob))/(mdy(1,1,pcf_yob+1) - mdy(1,1,pcf_yob));
+   end;
+
+   /**** Numident DOB ends here ****/

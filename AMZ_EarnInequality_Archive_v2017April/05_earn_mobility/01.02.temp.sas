@@ -1,0 +1,20 @@
+%include "config.sas";
+
+proc means data=outputs.pik_year_hc n mean min max;
+   class le_r;
+   var earn_total earn_person earn_firm ln_earn_alljobs ln_person_alljobs ln_firm_alljobs ln_skill_alljobs;
+run;
+proc means data=outputs.pik_year_hc n mean min max;
+   class lp_r;
+   var earn_total earn_person earn_firm ln_earn_alljobs ln_person_alljobs ln_firm_alljobs ln_skill_alljobs;
+run;
+proc means data=outputs.pik_year_hc n mean min max;
+   class lf_r;
+   var earn_total earn_person earn_firm ln_earn_alljobs ln_person_alljobs ln_firm_alljobs ln_skill_alljobs;
+run;
+proc means data=outputs.pik_year_hc n mean min max;
+   class ls_r;
+   var earn_total earn_person earn_firm ln_earn_alljobs ln_person_alljobs ln_firm_alljobs ln_skill_alljobs;
+run;
+proc print data=outputs.pik_year_hc(obs=1000);
+run;

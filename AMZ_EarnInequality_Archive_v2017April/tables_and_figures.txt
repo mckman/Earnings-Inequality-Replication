@@ -1,0 +1,245 @@
+
+Subject: Reproduction Archive for:
+         "Earnings Inequality and Mobility Trends in the United States:
+          Nationally Represenatative Estimates from Longitudinally Linked
+          Employer Employee Data"
+Authors: Kevin McKinney (John Abowd and Nellie Zhao)
+Date: April 10, 2017
+
+All released data is in Dropbox/JohnKevinLars/NBER Firms and Inequality/Tables_Kevin
+
+Tables and Figures in the Paper
+------------------------------------------------
+
+Table 1: Observations per Year for Eligible Workers and Immigrant Candidates
+   Program: 01_data/05.05.we_ic_counts.sas
+   Release File: AMZ_JOLE_2016_March.xlsx
+   Release File: AMZ_JOLE_Table_Supplement.xlsx
+
+Table 2: Descriptive Statistics by Real Earnings Bins
+   Program: 05_earn_mobility/03.00.rank_stats.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+Table 3: Labor-Force Activity of Workers in Each Earnings Bin
+   Program: 06_earn_decomp/04.03.qwork_tab.sas
+   Release File: AMZ_Work_Quarters_Jobs.xlsx
+
+Table 4: Average Percentiles of the Earnings Distribution from Household Surveys vs. LEHD
+   Calculated from previously released data
+
+Table 5: Flows into and out of Each Earnings Category
+   Programs: 05_earn_mobility/02.04.earn_year.sas
+             05_earn_mobility/02.07.earn_year_totals.sas 
+   Release File: AMZ_JOLE_Table_Supplement.xlsx
+
+Table 6: Demographic Characteristics of Workers by Transition Type
+   Program: 05_earn_mobility/03.03.earn_person_type_chars.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+Table 7: Statistics for Firm, Non-FIrm, and Skill Bins
+   Program: 05_earn_mobility/03.00.rank_stats.sas
+            05_earm_mobility/01.02.temp.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx (Firm and Non-Firm)
+   Release File: AMZ_Table_Add_2017_2.xlsx (Skill)
+
+Table 8: Firm Characteristics by Position in the Firm Component Distribution
+   Program: 05_earn_mobility/03.02.firm_type_chars.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+Table 9:  Earnings Associated with Flows by Firm Bin for Low-Skill Persons
+   Program: 06_earn_decomp/08.02.st_ft_et.sas
+   Release File: AMZ_Table_Add_2017_2.xlsx
+
+Table 10: Earnings Associated with Flows by Firm Bin for Middle-Skill Persons
+   Program: 06_earn_decomp/08.02.st_ft_et.sas
+   Release File: AMZ_Table_Add_2017_2.xlsx
+
+Table 11: Earnings Associated with Flows by Firm Bin for High-Skill Persons
+   Program: 06_earn_decomp/08.02.st_ft_et.sas
+   Release File: AMZ_Table_Add_2017_2.xlsx
+
+Table 12: Within Firm-Type and Skill-Type Inequality
+   Program: 06_earn_decomp/08.02.st_ft_et.sas
+   Release File: AMZ_Table_Add_2017_2.xlsx
+
+
+Figure 1: LEHD Infrastructure Data as Received and Date Regimes
+   Program: Public Use Data
+   Release File: AMZ_JOLE_2016_March.xlsx
+   Release File: AMZ_JOLE_Table_Supplement.xlsx
+
+Figure 2: Percentiles of the Earnings Distribution for Eligible Workers by Date Regime (Cumulative)
+   Program: 02_earn_dist/05.01.regime[1-4]_cum_we.sas
+   Release File: AMZ_Table_Add_2017_2.xlsx
+
+Figure 3: Selected Inequality Measures 1990-2013, Relative to 2000
+   Programs: 02_earn_dist/01.01.regime1_we_ic.sas
+             02_earn_dist/01.01.regime1_we.sas
+   Release File: AMZ_JOLE_2016_March.xlsx
+
+Figure 4: Selected Inequality Measures for the Top and Bottom of the Earnings Distribution 1990-2013, Relative to 2000
+   Programs: 02_earn_dist/01.01.regime1_we_ic.sas
+             02_earn_dist/01.01.regime1_we.sas
+   Release File: AMZ_JOLE_2016_March.xlsx
+
+Figure 5: Selected Inequality Measures 1990-2013, Relative to 2000 (CPS/ACS)
+   Programs: 02_earn_dist/01.01.regime1_we_ic.sas
+             02_earn_dist/01.01.regime1_we.sas
+             04_cps_acs/05.04.ACS_edist_real_cow.sas
+   Release File: AMZ_CPS_ACS_UI_matches.xlsx
+
+Figure 6: Share of Total Earnings in each Earnings Category
+   Program: 05_earn_mobility/04.02.gini_workers.sas
+   Release File: AMZ_JOLE_2016_March_Flow_Earn.xlsx
+
+Figure 7: Year-to-Year Change in the Number of Workers in Each Earnings Bin
+   Program: 05_earn_mobility/02.07.earn_year_totals.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+Figure 8: Flows into and out of the Eligible-Workers Frame
+   Program: 05_earn_mobility/02.04.earn_year.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+Figure 9: Flows into and out of Inactivity
+   Program: 05_earn_mobility/02.04.earn_year.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+Figure 10: Flows into and out of the Bottom 20% of the Earnings Distribution
+   Program: 05_earn_mobility/02.04.earn_year.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+Figure 11: Flows into and out of the Middle 60% of the Earnings Distribution
+   Program: 05_earn_mobility/02.04.earn_year.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+Figure 12: Flows into and out of the Top 20% of the Earnings Distribution
+   Program: 05_earn_mobility/02.04.earn_year.sas
+   Release File: AMZ_JOLE_2016_March_Flows.xlsx
+
+
+Tables and Figures in the Appendices
+------------------------------------------------
+
+Table A.1: LEHD Regimes
+   Release File: AMZ_JOLE_2016_March.xlsx
+   Release File: AMZ_JOLE_Table_Supplement.xlsx
+
+Table A.2 Immigrant Candidates - Excluded Earnings Records
+   Release File: AMZ_JOLE_2016_March.xlsx
+
+Table A.3: Earnings Measures - National Income and Product Accounts versus LEHD Data
+   Release File: AMZ_JOLE_2016_March.xlsx
+
+Table A.4: Labor Force Activity of Workers in Each Earnings Bin
+   Release File: AMZ_Work_Quarters_Jobs.xlsx
+
+Table B.1: Average Percentiles of the Earnings Distribution by Workers Frame (1995-2013)
+   Calculated from previously released data
+
+Table B.2: Inequality Measures Relative to 2000 by Worker Frame
+   Calculated from previously released data
+
+Table C.1: Inequality Measures Relative to 2000 for Workers in Household Surveys
+   Calculated from previously released data
+
+Table C.2: ACS/UI Match Comparison
+   Release File: AMZ_CPS_ACS_UI_matches.xlsx
+
+Table D.1: Inequality Measures with and without Inactive Workers
+   Release File: AMZ_Inequality_Measures.xlsx
+   Release File: AMZ_Inequality_Measures2.xlsx
+
+Table E.1: Descriptive Statistics by Earnings Categories
+   Release File: AMZ_JOLE_Table_Supplement.xlsx
+
+Table E.2: Earnings Associated with Exit from and Entry to Earch Earnings Category
+   Release File: AMZ_JOLE_Table_Supplement.xlsx
+
+Table E.3: Average Earnings and Variability by Transition Type
+   Release File: AMZ_JOLE_2016_Earn_Average.xlsx
+
+Table E.4: AKM Model Specifications
+   Release File: AMZ_AKM_coef.xlsx
+
+Table E.5: AKM Model Estimates
+   Release File: AMZ_AKM_coef.xlsx
+
+Table E.6: Earnings Associated with Flows by Firm Bin for Persons in the Bottom-Type Non-Firm Category
+   Release File: AMZ_JOLE_2016_March_Flow_Earn.xlsx
+   Release File: AMZ_Table_Add_2017_2.xlsx
+
+Table E.7: Earnings Associated with Flows by Firm Bin for Persons in the Middle-Type Non-Firm Category
+   Release File: AMZ_JOLE_2016_March_Flow_Earn.xlsx
+   Release File: AMZ_Table_Add_2017_2.xlsx
+
+Table E.8: Earnings Associated with Flows by Firm Bin for Persons in the High-Type Non-Firm Category
+   Release File: AMZ_JOLE_2016_March_Flow_Earn.xlsx
+   Release File: AMZ_Table_Add_2017_2.xlsx
+
+
+Figure A.1: Immigrant Candidates - Excluded Earnings Records
+   Release File: AMZ_JOLE_2016_March.xlsx
+
+Figure A.2: NIPA
+   Release File: AMZ_JOLE_2016_March.xlsx
+
+Figure B.1 Percentiles of the Earnings Distribution by Worker Frame
+   Release File: AMZ_JOLE_2016_March.xlsx
+
+Figure B.2: Ratio of the 90 to the 10th Percentile of the Earnings Distribution
+   Calculated from previously released data
+
+Figure B.3: Selected Inequality Measures 1990-2013, Relative to 2000 (All Workers)
+   Release File: AMZ_JOLE_2016_March.xlsx
+
+Figure B.4: Selected Inequality Measures for the Top and Bottom of the Earnings Distribution 1990-2013, Relative to 2000 (All Workers)
+   Calculated from previously released data
+
+Figure B.5: Percentile Ratios of the Earnings Distribution by Worker Frame
+   Calculated from previously released data
+
+Figure B.6: Percentile Ratios of the Earnings Distribution by Worker Frame
+   Calculated from previously released data
+
+Figure C.1: Percentiles of the Earnings Distribution for All and Covered Workers by Year
+   Release File: AMZ_CPS_ACS_UI_matches.xlsx
+
+Figure C.2: Ratio of UI Earnings to Household Survey Reported Earnings by Percentile
+   Release File: AMZ_CPS_ACS_UI_matches.xlsx
+
+Figure C.3: Selected Inequality Measures 1990-2013 for the Top and Bottom of the Earnings Distribution, Relative to 2000 (CPS/ACS)
+   Release File: AMZ_CPS_ACS_UI_matches.xlsx
+
+Figure C.4: Comparison of Percentiles in the ACS and LEHD
+   Calculated from previously released data
+
+Figure C.5: Comparison of Percentiles in the ACS and LEHD
+   Release File: AMZ_CPS_ACS_UI_matches.xlsx
+
+Figure D.1: Employment to Population Ratio (Household Surveys)
+   Release File: AMZ_CPS_ACS_UI_matches.xlsx
+
+Figure D.2:  Inactive Workers
+   Release File: AMZ_Inequality_Measures.xlsx
+   Release File: AMZ_Inequality_Measures2.xlsx
+
+Figure D.2: Inequality Measures - Gini Coefficeint
+   Release File: AMZ_Inequality_Measures.xlsx
+   Release File: AMZ_Inequality_Measures2.xlsx
+
+Figure D.3: Inequality Measures - Hoover Index
+   Release File: AMZ_Inequality_Measures.xlsx
+   Release File: AMZ_Inequality_Measures2.xlsx
+
+Figure D.4: Inequality Measures - Thiel Index
+   Release File: AMZ_Inequality_Measures.xlsx
+   Release File: AMZ_Inequality_Measures2.xlsx
+
+Figure E.1: Earnings Flows out from and in to the Bottom 20%
+   Release File: AMZ_JOLE_2016_March_Flow_Earn.xlsx
+
+Figure E.2: Earnings Flows out from and in to the Bottom 80%
+   Release File: AMZ_JOLE_2016_March_Flow_Earn.xlsx
+
+Figure E.3: Earnings Flows out from and in to the Bottom 20%
+   Release File: AMZ_JOLE_2016_March_Flow_Earn.xlsx

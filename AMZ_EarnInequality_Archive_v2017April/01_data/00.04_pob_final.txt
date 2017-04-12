@@ -1,0 +1,19 @@
+   /**** Numident POB begins here ****/
+
+   length POB $1 POB_flag pcf_born_us 3 pcf_pob $3 pcf_rob $1;
+
+   /* PCF */
+   if pobfin= "*" then pcf_pob = put(pobst,$fipstam.);
+   else if pobfin= " " then pcf_pob=put(pobst,$fipus.);
+
+   pcf_rob=put(pcf_pob,$regcode.);
+
+   if pcf_rob~=" " and pcf_rob~="9" then do;
+      POB_flag=0;
+      POB=pcf_rob;
+   end;
+   else POB_flag=9;
+
+   pcf_born_us = pcf_rob in ('A');
+
+   /**** Numident POB ends here ****/
